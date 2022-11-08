@@ -1,0 +1,12 @@
+SRS
+
+* user profile/ 
+        --->{normal user, 
+              teacher{ details, manage course{ add course, updated course, delete course},
+               student{details},
+               admin}
+* admin dashboard (control power)
+* post adding page
+
+
+
