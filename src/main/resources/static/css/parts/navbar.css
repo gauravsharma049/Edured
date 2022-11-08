@@ -11,7 +11,20 @@
     outline: 1px solid white;
 
 }
-
+.nav-profile{
+    height: 35px;
+    width: 35px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+.dropdown-menu{
+    background-color: #16c8e5;
+}
+.dropdown-item:hover{
+    background-color: #1f8cae;
+    /* color: white; */
+}
 .darkmodeinside {
     display: inline-block;
     height: 25px;
