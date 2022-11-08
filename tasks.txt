@@ -7,7 +7,6 @@ SRS
                admin}
 * admin dashboard (control power)
 * post adding page
-* 
 
 
 
