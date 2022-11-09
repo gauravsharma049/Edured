@@ -23,7 +23,9 @@
     background: rgb(151, 142, 142);
     cursor: pointer;
 }
-
+body{
+    font-family: sans-serif;
+}
 .darkmode{
     height: 35px;
     background-color: white;
