@@ -37,5 +37,10 @@ public class HomeController {
         model.addAttribute("title", "Page not found");
         return "notfound";
     }
+    @GetMapping("/dashbord")
+    public String dashbord(Model model){
+        model.addAttribute("title", "Student Dashbord");
+        return "studentdashboard";
+    }
 }
 
