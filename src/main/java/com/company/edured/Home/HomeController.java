@@ -1,8 +1,16 @@
 package com.company.edured.Home;
 
+import com.company.edured.entity.Student;
+import com.company.edured.helper.Message;
+import com.company.edured.repo.StudentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class HomeController {
@@ -49,6 +57,31 @@ public class HomeController {
     public String dashbord(Model model){
         model.addAttribute("title", "Student Dashbord");
         return "studentdashboard";
+    }
+
+    // this method for handling student registration
+
+    @Autowired
+    StudentRepository studentRepository;
+
+    @PostMapping("/do_register")
+    public String registration(@ModelAttribute("student")Student student, Model model, HttpSession session){
+        try {
+            System.out.println("Student: "+ student);
+
+            Student result = this.studentRepository.save(student);
+            model.addAttribute("student",result);
+
+            model.addAttribute("student", new Student());
+            session.setAttribute("message", new Message("Something went wrong","alert-success"));
+            return "index.html";
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            model.addAttribute("student",student);
+            session.setAttribute("message", new Message("Something went wrong","alert-danger"));
+            return "index.html";
+        }
     }
 }
 

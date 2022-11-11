@@ -223,7 +223,7 @@
                     <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
                 </form>
             
-                <form action="/signup/" class="form-signup">
+                <form th:action="@{/do_register}" method="post" th:object="${student}" class="form-signup">
                     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign Up</h1>
                     <div class="social-login d-flex justify-content-between">
                         <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f p-2 bg-white rounded-2" style="color: #3C589C;"></i> Sign up with Facebook</span>
@@ -234,10 +234,10 @@
             
                     <p style="text-align:center">OR</p>
             
-                    <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
-                    <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
-                    <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
-                    <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required
+                    <input type="text" name="name" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
+                    <input type="email" name="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+                    <input type="password" name="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+                    <input type="password" name="confirm_password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required
                            autofocus="">
             
                     <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
