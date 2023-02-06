@@ -38,6 +38,10 @@
     color: black;
 }
 
+.userprofile:hover{
+    color: #5f5959 !important;
+}
+
 .burgerbtn {
     border: 1px solid black;
     width: fit-content;

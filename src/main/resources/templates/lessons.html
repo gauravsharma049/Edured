@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::head}, ~{:: .content})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::head}, ~{:: .content}, ~{::script})">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -24,6 +24,7 @@
                     <div class="index-table-content"></div>
                     <div class="index-table-content">25632</div>
                 </div>
+                
                 <div class="course-content col mb-4 rounded-3 ">
                     <div id="courseContent" class="course-content-topics">
                         
@@ -32,5 +33,6 @@
             </div>
         </div>
     </div>
+    <script>console.log("lessons.html");</script>
 </body>
 </html>

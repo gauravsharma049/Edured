@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::head}, ~{:: .content})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::head}, ~{:: .content}, ~{::script})">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -58,5 +58,6 @@
             </div>
         </div>
     </div>
+    <script>console.log("contact.html");</script>
 </body>
 </html>
